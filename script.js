@@ -56,7 +56,7 @@ var Movie = React.createClass({
         poster: this.props.movie.poster,
         imgDisc: this.props.movie.title
       }),
-      React.createElement(MovieLine, { line: this.props.movie.line })
+      React.createElement("hr", {})
     );
   }
 });
@@ -98,15 +98,6 @@ var MoviePoster = React.createClass({
       src: this.props.poster,
       alt: this.props.imgDisc
     });
-  }
-});
-
-var MovieLine = React.createClass({
-  propTypes: {
-    line: React.PropTypes.object.isRequired
-  },
-  render: function() {
-    return React.createElement("hr", {}, this.props.line);
   }
 });
 
